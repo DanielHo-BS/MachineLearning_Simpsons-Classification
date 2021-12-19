@@ -67,7 +67,8 @@
 
         model = add_model
         
-        optimizer='adam' #設定優化器為adam
+        #設定optimizer與lossFunction
+        optimizer='adam' 
         model.compile(
           optimizer=optimizer,
           loss=tf.losses.CategoricalCrossentropy(), #設定loss function為CategoricalCrossentropy
