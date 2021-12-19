@@ -20,10 +20,12 @@
         rotation_range=30, #加入旋轉30度
         validation_split=0.2 #訓練集:驗證及=8:2
     )
+    
     #設定圖片大小與batch大小
     batch_size = 32
     img_height = 180
     img_width = 180
+    
     #使用flow_from_directory讀取資料集
     train_ds = datagen.flow_from_directory(
       data_dir, #資料集路徑
@@ -31,6 +33,7 @@
       seed=123, #隨機取樣
       target_size=(img_height, img_width),
       batch_size=batch_size)
+      
     val_ds = datagen.flow_from_directory(
       data_dir,
       subset="validation", #驗證集
