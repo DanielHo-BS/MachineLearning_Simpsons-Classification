@@ -76,9 +76,10 @@
 效果評估
 
     #使用Accuracy與Loss 進行評估  
+    
     #未加入資料擴增  
-  ![image](images/6.1.png)  
-  ![image](images/6.2.png)  
+![image](images/6.1.png)  
+![image](images/6.2.png)  
 
     #加入資料擴增  
 ![image](images/7.1.png)  
