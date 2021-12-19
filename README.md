@@ -79,6 +79,7 @@
     #比較資料擴增 前後  
     #Accuracy of test：0.97 to 0.98  
 
+
     #未加入資料擴增  
 ![image](images/6.1.png)  
 ![image](images/6.2.png)  
