@@ -71,7 +71,7 @@
         optimizer='adam' 
         model.compile(
           optimizer=optimizer,
-          loss=tf.losses.CategoricalCrossentropy(), #設定loss function為CategoricalCrossentropy
+          loss=tf.losses.CategoricalCrossentropy(),
           metrics=['accuracy'])
 
         model.summary()
