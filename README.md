@@ -10,7 +10,7 @@
 3.效果評估  
 4.改進  
 
-##0.環境設定  
+## 0.環境設定  
     Anaconda + jupyter notebook(or VScode)
     Tensorflow-GPU = 2.6  
     cuDNN = 8.1  
@@ -19,7 +19,7 @@
     Pandas、Numpy、Matplotlib、scikit-learn等常用套件
     
 
-##1.資料前處理  
+## 1.資料前處理  
 
     #Data Augmentation
     #建立ImageDataGenerator
@@ -51,7 +51,7 @@
       target_size=(img_height, img_width),
       batch_size=batch_size)
 
-##2.模型建構  
+## 2.模型建構  
 
     def model_ResNet50():
     #載入預訓練模型_ResNet50
@@ -87,7 +87,7 @@
         model.summary()
         return model
     
-##3.效果評估  
+## 3.效果評估  
 
     #使用Accuracy與Loss 進行評估  
     #比較資料擴增 前後  
@@ -101,7 +101,7 @@
 ![image](images/7.1.png)  
 ![image](images/7.2.png)  
   
-##4.改進  
+## 4.改進  
 
     拉長epoch，使模型訓練更多次。  
     嘗試使用其他預訓練模型。  
@@ -109,7 +109,7 @@
     使用K-Fold或是bagging，訓練多個小模型，最後在使用Ensemble。
     
     
-##5.成果  
+## 5.成果  
 
     Kaggle：Private Leaderboard (24/137)
 ![image](images/Leaderboard.png) 
