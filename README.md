@@ -4,12 +4,22 @@
 
 步驟
 --
+0.環境設定  
 1.資料前處理  
 2.模型建構  
 3.效果評估  
-4.改進
+4.改進  
 
-資料前處理
+##0.環境設定  
+    Anaconda + jupyter notebook(or VScode)
+    Tensorflow-GPU = 2.6  
+    cuDNN = 8.1  
+    CUDA = 11.2  
+    Keras = 2.6
+    Pandas、Numpy、Matplotlib、scikit-learn等常用套件
+    
+
+##1.資料前處理  
 
     #Data Augmentation
     #建立ImageDataGenerator
@@ -41,7 +51,7 @@
       target_size=(img_height, img_width),
       batch_size=batch_size)
 
-模型建構
+##2.模型建構  
 
     def model_ResNet50():
     #載入預訓練模型_ResNet50
@@ -77,28 +87,30 @@
         model.summary()
         return model
     
-效果評估
+##3.效果評估  
 
     #使用Accuracy與Loss 進行評估  
     #比較資料擴增 前後  
     #Accuracy of test：0.97 to 0.98  
 
-#未加入資料擴增  
+未加入資料擴增  
 ![image](images/6.1.png)  
 ![image](images/6.2.png)  
 
-#加入資料擴增  
+加入資料擴增  
 ![image](images/7.1.png)  
 ![image](images/7.2.png)  
   
-改進
+##4.改進  
 
     拉長epoch，使模型訓練更多次。  
     嘗試使用其他預訓練模型。  
-    最後輸出層改用SVM或RandomForest，作為分類器，預訓練模型只做為特徵提取。  
+    最後輸出層改用SVM或RandomForest，作為分類器，預訓練模型只做為特徵提取。
+    使用K-Fold或是bagging，訓練多個小模型，最後在使用Ensemble。
     
     
-成果
+##5.成果  
 
-    Kaggle：Private Leaderboard
+    Kaggle：Private Leaderboard (24/137)
+![image](images/Leaderboard.png) 
    
