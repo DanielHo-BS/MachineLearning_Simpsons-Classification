@@ -1,6 +1,6 @@
 # Kaggle：Simpsons-Classification
 使用的預訓練模型為ResNet50  
-以Python撰寫 
+以Python撰寫  
     training：train.ipynb  
     testing：test.ipynb  
 
